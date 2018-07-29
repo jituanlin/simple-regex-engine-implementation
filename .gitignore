@@ -1,5 +1,5 @@
-#.idea/misc.xml
-#.idea/modules.xml
-#.idea/simple-regex-engine-implementation.iml
-#.idea/workspace.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/simple-regex-engine-implementation.iml
+.idea/workspace.xml
 node_modules/
