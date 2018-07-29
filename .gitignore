@@ -1,0 +1,10 @@
+.idea/misc.xml
+.idea/modules.xml
+.idea/simple-regex-engine-implementation.iml
+.idea/workspace.xml
+index.js
+jest.config.js
+node_modules/
+package.json
+src/
+yarn.lock
