@@ -37,7 +37,7 @@ const compileZeroOrMore = (zeroOrMore, tail = EmptyStr) => {
 const compileAny = (tail = EmptyStr) => new AnyCharacterNode(tail)
 
 function compile(expr, tail = EmptyStr) {
-    if (Any) return compileAny(tail)
+    if (expr===Any) return compileAny(tail)
 
     switch (expr.constructor) {
         case String:
