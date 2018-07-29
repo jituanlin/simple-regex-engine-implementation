@@ -1,0 +1,19 @@
+{
+  "name": "simple-regex-engine-implementation",
+  "version": "1.0.0",
+  "description": "The simple regex engine implementation",
+  "main": "index.js",
+  "author": "jituanlin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jituanlin/simple-regex-engine-implementation.git"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "ramda": "^0.25.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
