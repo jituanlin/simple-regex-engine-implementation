@@ -1,6 +1,6 @@
 const {
     Re,
-    Any, EmptyStr, Or, ZeroOrMore
+    Any, Or, ZeroOrMore
 } = require('../index')
 
 test('zeroOrMore: repeat words twice times ',
@@ -19,7 +19,7 @@ test('Or & Array: failure case',
 )
 
 test('Any: success case',
-    () => expect(new Re(["a", Any, "d"]).match("aed")).toBe(false)
+    () => expect(new Re(["a", Any, "d"]).match("aed")).toBe(true)
 )
 
 test('Any: failure case',
