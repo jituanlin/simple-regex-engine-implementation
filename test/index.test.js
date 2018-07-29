@@ -19,17 +19,16 @@ test('Or & Array: failure case',
 )
 
 test('Any: success case',
-    () => expect(new Re(["a",Any, "d"]).match("aed")).toBe(false)
+    () => expect(new Re(["a", Any, "d"]).match("aed")).toBe(false)
 )
 
 test('Any: failure case',
-    () => expect(new Re(["a",Any, "d"]).match("ad")).toBe(false)
+    () => expect(new Re(["a", Any, "d"]).match("ad")).toBe(false)
 )
 
 
-
 describe('phone number:',
-    ()=>{
+    () => {
         const Digit = Or(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'])
         const usPhoneNumber = new Re([Or([['(', Digit, Digit, Digit, ') '], '']), Digit, Digit, Digit, '-', Digit, Digit, Digit, Digit]);
 

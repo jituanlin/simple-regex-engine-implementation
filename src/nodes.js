@@ -2,9 +2,11 @@ class ReNode {
     derive() {
         return NeverMatches
     }
+
     get matchEnd() {
         return false
     }
+
     get canMatchMore() {
         return !this.matchEnd
     }
@@ -17,6 +19,7 @@ class _EmptyStr extends ReNode {
         return true
     }
 }
+
 const EmptyStr = new _EmptyStr
 
 class CharacterNode extends ReNode {
@@ -37,6 +40,7 @@ class AnyCharacterNode extends ReNode {
         super()
         this.next = next
     }
+
     derive(char) {
         return this.next
     }
@@ -46,8 +50,10 @@ class AlternativeNode {
     constructor(alternatives) {
         alternatives = alternatives.filter(alt => alt !== NeverMatches)
         switch (alternatives.length) {
-            case 0: return NeverMatches
-            case 1: return alternatives[0]
+            case 0:
+                return NeverMatches
+            case 1:
+                return alternatives[0]
             default:
                 this.alternatives = alternatives
                 return this
@@ -83,11 +89,14 @@ class RepetitionNode extends ReNode {
         ])
     }
 
-    get canMatchMore() { return true }
+    get canMatchMore() {
+        return true
+    }
 
-    get matchEnd() { return this.next.matchEnd }
+    get matchEnd() {
+        return this.next.matchEnd
+    }
 }
 
 
-
-module.exports = { EmptyStr, CharacterNode, AnyCharacterNode, AlternativeNode, RepetitionNode }
+module.exports = {EmptyStr, CharacterNode, AnyCharacterNode, AlternativeNode, RepetitionNode}
