@@ -10,7 +10,7 @@
     "url": "git+https://github.com/jituanlin/simple-regex-engine-implementation.git"
   },
   "dependencies": {
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.19",
     "ramda": "^0.25.0"
   },
   "scripts": {
